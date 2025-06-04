@@ -1,17 +1,17 @@
+from dataclasses import dataclass
+
+@dataclass
 class Cliente:
-    def __init__(self, nome:str,email:str):
-        self.nome = nome
-        self.email = email
-        
+    nome: str
+    email:str
+    idade:int
+    
     def exibir(self):
-        print(self.nome , self.email)
-        
-    def chamar_exibir(self):
-        self.exibir()
-        
-        
-cliente = Cliente("fernando",'a@gmail.com')
+        print(f"O cliente {self.nome} tem {self.idade} anos e seu email de contato é {self.email}")
+    
+cliente = Cliente(nome='fernando',email='a@l.com',idade=20)
+
+print(cliente)
+print(cliente.nome, cliente.email, cliente.idade)
 
 cliente.exibir()
-
-cliente.chamar_exibir()
