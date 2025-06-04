@@ -6,7 +6,12 @@ class Cliente:
     def exibir(self):
         print(self.nome , self.email)
         
+    def chamar_exibir(self):
+        self.exibir()
+        
         
 cliente = Cliente("fernando",'a@gmail.com')
 
 cliente.exibir()
+
+cliente.chamar_exibir()
