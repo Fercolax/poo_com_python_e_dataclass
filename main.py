@@ -1,17 +1,13 @@
-from dataclasses import dataclass
+from categoria import Categoria
+from transacao import Transacao
 
-@dataclass
-class Cliente:
-    nome: str
-    email:str
-    idade:int
-    
-    def exibir(self):
-        print(f"O cliente {self.nome} tem {self.idade} anos e seu email de contato é: {self.email}")
-    
-cliente = Cliente(nome='fernando',email='a@l.com',idade=20)
 
-print(cliente)
-print(cliente.nome, cliente.email, cliente.idade)
+c = Categoria(nome="Receitas")
 
-cliente.exibir()
+t = Transacao(
+    descricao="Salário Jan/2024",
+    valor=1000.0,
+    categoria=c
+)
+
+t.exibir()
